@@ -1,0 +1,11 @@
+version: '2.1'
+
+services:
+
+  spot:
+    build: spot-demo
+    hostname: spot
+    container_name: spot
+    ports:
+      - 8889:8889
+

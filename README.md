@@ -23,23 +23,32 @@ the spot-demo is the source for apachespot/spot-demo
 
 ## **Prerequisites**
 
-* Docker
+* docker
+* docker-compose
 
 ## **Build**
 
-for an example build we will use the `spot-demo`
+This is an optional step that forces a build:
 
-1. download source code `git clone https://github.com/Open-Network-Insight/spot-docker`
+    docker-compose build
 
-2. select project folder `cd spot-demo`
+## **Run**
 
-3. build image `docker build -t spot-demo .`
+It should be as easy as:
 
-    a. the `-t [value] names and optionally tags the build image`
+    docker-compose up -d
 
-    b. the `.` tells docker to look in the current folder for the `Dockerfile`
+Now try to open this URL in your browser:
 
-4. run the image `docker run -it -p 8889:8889 spot-demo`
+- http://localhost:8889
+
+Navigate to the ipynb/ folder by clicking on it.
+
+Under the dns/, flow/, and proxy/ folders there are `*/Edge_Investigation.ipynb` and `*/Thread_Investigation.ipynb` for each. Open these up and click Run to start running those notebooks.
+
+Now you should be able to visit the web pages for each by directly on each:
+
+- http://127.0.0.1:8889/files/ui/flow/suspicious.html#date=2016-07-08
 
 ## **Needs**
 
